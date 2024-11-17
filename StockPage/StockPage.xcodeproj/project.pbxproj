@@ -8,14 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		B221843D2CE9F0E3005E33A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B221843C2CE9F0E3005E33A2 /* AppDelegate.swift */; };
-		B221843F2CE9F0E3005E33A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B221843E2CE9F0E3005E33A2 /* SceneDelegate.swift */; };
-		B22184412CE9F0E3005E33A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22184402CE9F0E3005E33A2 /* ViewController.swift */; };
-		B22184442CE9F0E3005E33A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B22184422CE9F0E3005E33A2 /* Main.storyboard */; };
+		B22184412CE9F0E3005E33A2 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22184402CE9F0E3005E33A2 /* RootTabBarController.swift */; };
 		B22184462CE9F0E5005E33A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B22184452CE9F0E5005E33A2 /* Assets.xcassets */; };
 		B22184492CE9F0E5005E33A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B22184472CE9F0E5005E33A2 /* LaunchScreen.storyboard */; };
 		B22184542CE9F0E5005E33A2 /* StockPageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22184532CE9F0E5005E33A2 /* StockPageTests.swift */; };
 		B221845E2CE9F0E5005E33A2 /* StockPageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B221845D2CE9F0E5005E33A2 /* StockPageUITests.swift */; };
 		B22184602CE9F0E5005E33A2 /* StockPageUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B221845F2CE9F0E5005E33A2 /* StockPageUITestsLaunchTests.swift */; };
+		B221846F2CEA07CD005E33A2 /* WatchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B221846E2CEA07CD005E33A2 /* WatchListViewController.swift */; };
+		B22184712CEA07D7005E33A2 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22184702CEA07D7005E33A2 /* OrderViewController.swift */; };
+		B22184732CEA07E3005E33A2 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22184722CEA07E3005E33A2 /* PortfolioViewController.swift */; };
+		B22184752CEA07ED005E33A2 /* FundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22184742CEA07ED005E33A2 /* FundViewController.swift */; };
+		B22184772CEA07FB005E33A2 /* InvestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22184762CEA07FB005E33A2 /* InvestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +41,7 @@
 /* Begin PBXFileReference section */
 		B22184392CE9F0E3005E33A2 /* StockPage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockPage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B221843C2CE9F0E3005E33A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B221843E2CE9F0E3005E33A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B22184402CE9F0E3005E33A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B22184432CE9F0E3005E33A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B22184402CE9F0E3005E33A2 /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		B22184452CE9F0E5005E33A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B22184482CE9F0E5005E33A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B221844A2CE9F0E5005E33A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +50,11 @@
 		B22184592CE9F0E5005E33A2 /* StockPageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StockPageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B221845D2CE9F0E5005E33A2 /* StockPageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPageUITests.swift; sourceTree = "<group>"; };
 		B221845F2CE9F0E5005E33A2 /* StockPageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPageUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B221846E2CEA07CD005E33A2 /* WatchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListViewController.swift; sourceTree = "<group>"; };
+		B22184702CEA07D7005E33A2 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		B22184722CEA07E3005E33A2 /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
+		B22184742CEA07ED005E33A2 /* FundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundViewController.swift; sourceTree = "<group>"; };
+		B22184762CEA07FB005E33A2 /* InvestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +105,8 @@
 		B221843B2CE9F0E3005E33A2 /* StockPage */ = {
 			isa = PBXGroup;
 			children = (
+				B221846C2CEA079D005E33A2 /* TabBarControllers */,
 				B221843C2CE9F0E3005E33A2 /* AppDelegate.swift */,
-				B221843E2CE9F0E3005E33A2 /* SceneDelegate.swift */,
-				B22184402CE9F0E3005E33A2 /* ViewController.swift */,
-				B22184422CE9F0E3005E33A2 /* Main.storyboard */,
 				B22184452CE9F0E5005E33A2 /* Assets.xcassets */,
 				B22184472CE9F0E5005E33A2 /* LaunchScreen.storyboard */,
 				B221844A2CE9F0E5005E33A2 /* Info.plist */,
@@ -125,6 +129,27 @@
 				B221845F2CE9F0E5005E33A2 /* StockPageUITestsLaunchTests.swift */,
 			);
 			path = StockPageUITests;
+			sourceTree = "<group>";
+		};
+		B221846C2CEA079D005E33A2 /* TabBarControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B22184402CE9F0E3005E33A2 /* RootTabBarController.swift */,
+				B221846D2CEA07A8005E33A2 /* ChildrenControllers */,
+			);
+			path = TabBarControllers;
+			sourceTree = "<group>";
+		};
+		B221846D2CEA07A8005E33A2 /* ChildrenControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B221846E2CEA07CD005E33A2 /* WatchListViewController.swift */,
+				B22184702CEA07D7005E33A2 /* OrderViewController.swift */,
+				B22184722CEA07E3005E33A2 /* PortfolioViewController.swift */,
+				B22184742CEA07ED005E33A2 /* FundViewController.swift */,
+				B22184762CEA07FB005E33A2 /* InvestViewController.swift */,
+			);
+			path = ChildrenControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +258,6 @@
 			files = (
 				B22184492CE9F0E5005E33A2 /* LaunchScreen.storyboard in Resources */,
 				B22184462CE9F0E5005E33A2 /* Assets.xcassets in Resources */,
-				B22184442CE9F0E3005E33A2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +282,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B22184412CE9F0E3005E33A2 /* ViewController.swift in Sources */,
+				B22184412CE9F0E3005E33A2 /* RootTabBarController.swift in Sources */,
+				B22184732CEA07E3005E33A2 /* PortfolioViewController.swift in Sources */,
+				B22184712CEA07D7005E33A2 /* OrderViewController.swift in Sources */,
 				B221843D2CE9F0E3005E33A2 /* AppDelegate.swift in Sources */,
-				B221843F2CE9F0E3005E33A2 /* SceneDelegate.swift in Sources */,
+				B22184752CEA07ED005E33A2 /* FundViewController.swift in Sources */,
+				B22184772CEA07FB005E33A2 /* InvestViewController.swift in Sources */,
+				B221846F2CEA07CD005E33A2 /* WatchListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +325,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B22184422CE9F0E3005E33A2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B22184432CE9F0E3005E33A2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B22184472CE9F0E5005E33A2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -447,7 +467,6 @@
 				INFOPLIST_FILE = StockPage/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -475,7 +494,6 @@
 				INFOPLIST_FILE = StockPage/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
