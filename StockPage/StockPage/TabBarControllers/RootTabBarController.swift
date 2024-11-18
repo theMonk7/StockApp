@@ -35,6 +35,7 @@ class RootTabBarController: UITabBarController {
         tabBarAppearance.configureWithOpaqueBackground()
         
         UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+        UITabBar.appearance().standardAppearance = tabBarAppearance
     }
     // TODO: - Refactor
     private func makeTabChildControllerWith(_ config: TabChildControllerConfiguration) -> UINavigationController {
