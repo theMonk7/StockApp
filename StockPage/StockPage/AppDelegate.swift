@@ -19,9 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func setUpWindowViewController() {
         window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
         let rootViewController = RootTabBarController()
         window?.rootViewController = rootViewController
-        window?.makeKeyAndVisible()
+        
     }
 
 

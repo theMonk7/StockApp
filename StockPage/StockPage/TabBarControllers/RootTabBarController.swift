@@ -20,38 +20,37 @@ class RootTabBarController: UITabBarController {
     // MARK: - Private methods
     
     private func setupTabBar() {
-        
-        let watchVC = WatchListViewController()
-        let orderVC = OrderViewController()
-        let portfolioVC = PortfolioViewController()
-        let fundVC = FundViewController()
-        let investVC = InvestViewController()
-        
-        // Set tab bar items with titles and icons
-        watchVC.tabBarItem = UITabBarItem(title: "Watchlist", image: UIImage(systemName: "list.bullet"), tag: 0)
-        orderVC.tabBarItem = UITabBarItem(title: "Orders", image: UIImage(systemName: "clock.arrow.circlepath"), tag: 1)
-        portfolioVC.tabBarItem = UITabBarItem(title: "Portfolio", image: UIImage(systemName: "suitcase"), tag: 2)
-        fundVC.tabBarItem = UITabBarItem(title: "Funds", image: UIImage(systemName: "indianrupeesign"), tag: 3)
-        investVC.tabBarItem = UITabBarItem(title: "Invest", image: UIImage(systemName: "gearshape"), tag: 4)
-        
-        // Embed the view controllers in navigation controllers if needed
-        let watchNavController = UINavigationController(rootViewController: watchVC)
-        let orderNavController = UINavigationController(rootViewController: orderVC)
-        let portfolioNavController = UINavigationController(rootViewController: portfolioVC)
-        let fundNavController = UINavigationController(rootViewController: fundVC)
-        let investNavController = UINavigationController(rootViewController: investVC)
-        
+        let watchNavController = makeTabChildControllerWith(.watchlist)
+        let orderNavController = makeTabChildControllerWith(.orders)
+        let portfolioNavController = makeTabChildControllerWith(.portfolio)
+        let fundNavController = makeTabChildControllerWith(.funds)
+        let investNavController = makeTabChildControllerWith(.invest)
         // Set the view controllers of the tab bar
-        viewControllers = [watchNavController, orderNavController, portfolioNavController, fundNavController, investNavController]
-        
-        // Customize the appearance of the tab bar
-        tabBar.tintColor = .systemBlue
+        self.viewControllers = [watchNavController, orderNavController, portfolioNavController, fundNavController, investNavController]
+
+        tabBar.tintColor = UIColor.tabTintColor
         tabBar.unselectedItemTintColor = .gray
         tabBar.backgroundColor = .white
+        let tabBarAppearance: UITabBarAppearance = UITabBarAppearance()
+        tabBarAppearance.configureWithOpaqueBackground()
+        
+        UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
     }
-    
-    
-
-
+    // TODO: - Refactor
+    private func makeTabChildControllerWith(_ config: TabChildControllerConfiguration) -> UINavigationController {
+        
+        let vc = config.tabViewController()
+        vc.tabBarItem = UITabBarItem(title: config.tabTitle, image: config.tabImage, tag: config.rawValue)
+        
+        let navController = UINavigationController(rootViewController: vc)
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithDefaultBackground()
+        appearance.backgroundColor = UIColor.navBarThemeColor
+        UINavigationBar.appearance().tintColor = UIColor.white
+        navController.navigationBar.scrollEdgeAppearance = appearance
+        navController.navigationBar.standardAppearance = appearance
+        return navController
+        
+    }
 }
 

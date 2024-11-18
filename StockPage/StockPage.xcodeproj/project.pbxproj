@@ -19,6 +19,14 @@
 		B22184732CEA07E3005E33A2 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22184722CEA07E3005E33A2 /* PortfolioViewController.swift */; };
 		B22184752CEA07ED005E33A2 /* FundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22184742CEA07ED005E33A2 /* FundViewController.swift */; };
 		B22184772CEA07FB005E33A2 /* InvestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22184762CEA07FB005E33A2 /* InvestViewController.swift */; };
+		B2F100C62CEA2A44009E7D37 /* TabChildControllerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100C52CEA2A44009E7D37 /* TabChildControllerConfiguration.swift */; };
+		B2F100C92CEA46BB009E7D37 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100C82CEA46BB009E7D37 /* Constants.swift */; };
+		B2F100D22CEA5522009E7D37 /* PortfolioTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100D02CEA5522009E7D37 /* PortfolioTableCell.swift */; };
+		B2F100D32CEA5522009E7D37 /* PortfolioTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2F100D12CEA5522009E7D37 /* PortfolioTableCell.xib */; };
+		B2F100D52CEA7E3D009E7D37 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100D42CEA7E3D009E7D37 /* UIColor+Extensions.swift */; };
+		B2F100D82CEA9634009E7D37 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100D72CEA9634009E7D37 /* HTTPClient.swift */; };
+		B2F100DA2CEA96DA009E7D37 /* PortfolioDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100D92CEA96DA009E7D37 /* PortfolioDataModel.swift */; };
+		B2F100DC2CEAA022009E7D37 /* PortfolioDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100DB2CEAA022009E7D37 /* PortfolioDataViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +63,14 @@
 		B22184722CEA07E3005E33A2 /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
 		B22184742CEA07ED005E33A2 /* FundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundViewController.swift; sourceTree = "<group>"; };
 		B22184762CEA07FB005E33A2 /* InvestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestViewController.swift; sourceTree = "<group>"; };
+		B2F100C52CEA2A44009E7D37 /* TabChildControllerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabChildControllerConfiguration.swift; sourceTree = "<group>"; };
+		B2F100C82CEA46BB009E7D37 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B2F100D02CEA5522009E7D37 /* PortfolioTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioTableCell.swift; sourceTree = "<group>"; };
+		B2F100D12CEA5522009E7D37 /* PortfolioTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PortfolioTableCell.xib; sourceTree = "<group>"; };
+		B2F100D42CEA7E3D009E7D37 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		B2F100D72CEA9634009E7D37 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		B2F100D92CEA96DA009E7D37 /* PortfolioDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDataModel.swift; sourceTree = "<group>"; };
+		B2F100DB2CEAA022009E7D37 /* PortfolioDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDataViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +121,9 @@
 		B221843B2CE9F0E3005E33A2 /* StockPage */ = {
 			isa = PBXGroup;
 			children = (
+				B2F100C82CEA46BB009E7D37 /* Constants.swift */,
+				B2F100D62CEA9166009E7D37 /* Utils */,
+				B29769402CEA21E2001E2D4F /* Extensions */,
 				B221846C2CEA079D005E33A2 /* TabBarControllers */,
 				B221843C2CE9F0E3005E33A2 /* AppDelegate.swift */,
 				B22184452CE9F0E5005E33A2 /* Assets.xcassets */,
@@ -135,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				B22184402CE9F0E3005E33A2 /* RootTabBarController.swift */,
+				B2F100C72CEA2C49009E7D37 /* Enums */,
 				B221846D2CEA07A8005E33A2 /* ChildrenControllers */,
 			);
 			path = TabBarControllers;
@@ -143,13 +163,89 @@
 		B221846D2CEA07A8005E33A2 /* ChildrenControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B221846E2CEA07CD005E33A2 /* WatchListViewController.swift */,
-				B22184702CEA07D7005E33A2 /* OrderViewController.swift */,
-				B22184722CEA07E3005E33A2 /* PortfolioViewController.swift */,
-				B22184742CEA07ED005E33A2 /* FundViewController.swift */,
-				B22184762CEA07FB005E33A2 /* InvestViewController.swift */,
+				B2F100CB2CEA4E44009E7D37 /* Watch */,
+				B2F100CE2CEA4E58009E7D37 /* Order */,
+				B2F100CA2CEA4E33009E7D37 /* Portfolio */,
+				B2F100CC2CEA4E4F009E7D37 /* Fund */,
+				B2F100CD2CEA4E54009E7D37 /* Invest */,
 			);
 			path = ChildrenControllers;
+			sourceTree = "<group>";
+		};
+		B29769402CEA21E2001E2D4F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B2F100D42CEA7E3D009E7D37 /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B2F100C72CEA2C49009E7D37 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				B2F100C52CEA2A44009E7D37 /* TabChildControllerConfiguration.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		B2F100CA2CEA4E33009E7D37 /* Portfolio */ = {
+			isa = PBXGroup;
+			children = (
+				B22184722CEA07E3005E33A2 /* PortfolioViewController.swift */,
+				B2F100DB2CEAA022009E7D37 /* PortfolioDataViewModel.swift */,
+				B2F100D92CEA96DA009E7D37 /* PortfolioDataModel.swift */,
+				B2F100CF2CEA54FF009E7D37 /* Cell */,
+			);
+			path = Portfolio;
+			sourceTree = "<group>";
+		};
+		B2F100CB2CEA4E44009E7D37 /* Watch */ = {
+			isa = PBXGroup;
+			children = (
+				B221846E2CEA07CD005E33A2 /* WatchListViewController.swift */,
+			);
+			path = Watch;
+			sourceTree = "<group>";
+		};
+		B2F100CC2CEA4E4F009E7D37 /* Fund */ = {
+			isa = PBXGroup;
+			children = (
+				B22184742CEA07ED005E33A2 /* FundViewController.swift */,
+			);
+			path = Fund;
+			sourceTree = "<group>";
+		};
+		B2F100CD2CEA4E54009E7D37 /* Invest */ = {
+			isa = PBXGroup;
+			children = (
+				B22184762CEA07FB005E33A2 /* InvestViewController.swift */,
+			);
+			path = Invest;
+			sourceTree = "<group>";
+		};
+		B2F100CE2CEA4E58009E7D37 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				B22184702CEA07D7005E33A2 /* OrderViewController.swift */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		B2F100CF2CEA54FF009E7D37 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B2F100D02CEA5522009E7D37 /* PortfolioTableCell.swift */,
+				B2F100D12CEA5522009E7D37 /* PortfolioTableCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B2F100D62CEA9166009E7D37 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B2F100D72CEA9634009E7D37 /* HTTPClient.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B22184492CE9F0E5005E33A2 /* LaunchScreen.storyboard in Resources */,
+				B2F100D32CEA5522009E7D37 /* PortfolioTableCell.xib in Resources */,
 				B22184462CE9F0E5005E33A2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,11 +381,18 @@
 			files = (
 				B22184412CE9F0E3005E33A2 /* RootTabBarController.swift in Sources */,
 				B22184732CEA07E3005E33A2 /* PortfolioViewController.swift in Sources */,
+				B2F100D82CEA9634009E7D37 /* HTTPClient.swift in Sources */,
 				B22184712CEA07D7005E33A2 /* OrderViewController.swift in Sources */,
+				B2F100DA2CEA96DA009E7D37 /* PortfolioDataModel.swift in Sources */,
 				B221843D2CE9F0E3005E33A2 /* AppDelegate.swift in Sources */,
 				B22184752CEA07ED005E33A2 /* FundViewController.swift in Sources */,
+				B2F100C92CEA46BB009E7D37 /* Constants.swift in Sources */,
+				B2F100D52CEA7E3D009E7D37 /* UIColor+Extensions.swift in Sources */,
 				B22184772CEA07FB005E33A2 /* InvestViewController.swift in Sources */,
 				B221846F2CEA07CD005E33A2 /* WatchListViewController.swift in Sources */,
+				B2F100DC2CEAA022009E7D37 /* PortfolioDataViewModel.swift in Sources */,
+				B2F100C62CEA2A44009E7D37 /* TabChildControllerConfiguration.swift in Sources */,
+				B2F100D22CEA5522009E7D37 /* PortfolioTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +573,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -496,6 +601,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
