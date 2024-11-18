@@ -7,6 +7,18 @@
 
 import UIKit
 
+
+extension UIImage {
+    static func createSelectionIndicator(color: UIColor, size: CGSize, lineWidth: CGFloat) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(size, false, 0)
+        color.setFill()
+        UIRectFill(CGRect(x: 0, y: -lineWidth, width: size.width, height: lineWidth))
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image ?? UIImage()
+    }
+}
+
 class RootTabBarController: UITabBarController {
 
     override func viewDidLoad() {
@@ -29,13 +41,15 @@ class RootTabBarController: UITabBarController {
         self.viewControllers = [watchNavController, orderNavController, portfolioNavController, fundNavController, investNavController]
 
         tabBar.tintColor = UIColor.tabTintColor
-        tabBar.unselectedItemTintColor = .gray
+        tabBar.unselectedItemTintColor = .unselectedTabItemcolor
         tabBar.backgroundColor = .white
         let tabBarAppearance: UITabBarAppearance = UITabBarAppearance()
         tabBarAppearance.configureWithOpaqueBackground()
         
         UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
         UITabBar.appearance().standardAppearance = tabBarAppearance
+        
+        tabBar.selectionIndicatorImage = UIImage.createSelectionIndicator(color: .tabTintColor, size: CGSize(width:tabBar.frame.width/CGFloat(tabBar.items!.count), height: tabBar.frame.height), lineWidth: 3.0)
     }
     // TODO: - Refactor
     private func makeTabChildControllerWith(_ config: TabChildControllerConfiguration) -> UINavigationController {

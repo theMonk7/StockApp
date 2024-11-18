@@ -167,15 +167,12 @@ extension PortfolioViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PortfolioTableCell.identifier, for: indexPath) as? PortfolioTableCell else {
             return UITableViewCell()
         }
-        cell.ltpLabel.text = "₹ \(viewModel.stockData[indexPath.row].ltp)"
-        cell.netQuantityLabel.text = "₹ \(viewModel.stockData[indexPath.row].quantity)"
-        cell.plLabel.text = "₹ \(viewModel.stockData[indexPath.row].ltp)"
-        cell.stockNameLabel.text = viewModel.stockData[indexPath.row].symbol
+        cell.viewModel = PortfolioCellViewModel(stockData: viewModel.stockData[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 100
     }
     
     

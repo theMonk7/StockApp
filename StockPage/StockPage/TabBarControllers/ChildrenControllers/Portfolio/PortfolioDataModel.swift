@@ -21,6 +21,4 @@ struct StockData: Decodable {
     let ltp: Double
     let avgPrice: Double
     let close: Double
-    
-
 }
