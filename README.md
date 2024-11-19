@@ -1,4 +1,4 @@
-# UI for a Trading APP
+# Trading APP
 <img width="69" alt="Screenshot 2024-11-20 at 3 31 30 AM" src="https://github.com/user-attachments/assets/737d91cd-3cd9-47ac-9696-cc6d764af0d4">
 
 ### Architecture:
