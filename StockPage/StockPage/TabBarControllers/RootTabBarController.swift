@@ -14,6 +14,7 @@ class RootTabBarController: UITabBarController {
         
         // Set Up Tab Bar Controller
         setupTabBar()
+        self.selectedIndex = 2
     }
     
     // MARK: - Private methods
