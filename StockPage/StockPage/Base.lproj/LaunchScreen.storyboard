@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="indianrupeesign.arrow.circlepath" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XLO-oE-rkw">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="indianrupeesign.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XLO-oE-rkw">
                                 <rect key="frame" x="146.66666666666666" y="377" width="100" height="98.666666666666686"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -39,6 +39,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="indianrupeesign.arrow.circlepath" catalog="system" width="128" height="112"/>
+        <image name="indianrupeesign.circle.fill" catalog="system" width="128" height="123"/>
     </resources>
 </document>
