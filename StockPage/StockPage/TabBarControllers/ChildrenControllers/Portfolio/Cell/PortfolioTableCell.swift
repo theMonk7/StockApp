@@ -50,9 +50,9 @@ class PortfolioTableCell: UITableViewCell {
     // MARK:  Private methods
     
     private func setUpUI() {
-        ltpLabel.text = viewModel?.formattedLtp
+        ltpLabel.text = viewModel?.ltp.indianCurrencyFormat
         netQuantityLabel.text = viewModel?.formattedQuantity
-        plLabel.text = viewModel?.formattedTodayPnl
+        plLabel.text = viewModel?.todayPnl.indianCurrencyFormat
         stockNameLabel.text = viewModel?.stockName
         plLabel.textColor = viewModel?.pnlTextColor
     }

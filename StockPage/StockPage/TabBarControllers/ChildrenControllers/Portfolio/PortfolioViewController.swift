@@ -90,7 +90,9 @@ class PortfolioViewController: UIViewController {
         viewModel.$stockData
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
-                self?.tableView.reloadData()
+                guard let self = self else { return }
+                self.tableView.reloadData()
+                self.sheet.viewModel = BottomSheetUIViewModel(stockData: self.viewModel.stockData)
             }
             .store(in: &cancellables)
         
@@ -118,6 +120,9 @@ class PortfolioViewController: UIViewController {
     }
     
     private func style() {
+        
+        self.view.backgroundColor = .white
+        
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self
@@ -157,7 +162,7 @@ class PortfolioViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: switcherView.bottomAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -43),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])

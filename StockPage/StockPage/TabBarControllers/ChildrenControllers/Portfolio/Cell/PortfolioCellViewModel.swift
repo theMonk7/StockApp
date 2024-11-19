@@ -17,22 +17,15 @@ struct PortfolioCellViewModel {
     private var totalPnl: Double {
         stockData.ltp*stockData.quantity - stockData.avgPrice*stockData.quantity
     }
-    
-    private var todayPnl: Double {
+    var todayPnl: Double {
         (stockData.close - stockData.ltp)*stockData.quantity
     }
     
     var formattedQuantity: String {
-        return "\(stockData.quantity)"
+        return "\(Int(stockData.quantity))"
     }
-    var formattedLtp: String {
-        return "₹ " + String(format: "%.2f", stockData.ltp)
-    }
-    var formattedTotalPnl: String {
-        return totalPnl > 0 ? "₹ " + String(format: "%.2f", totalPnl) : "- ₹" + String(format: "%.2f", -totalPnl)
-    }
-    var formattedTodayPnl: String {
-        return "₹ " + String(format: "%.2f", todayPnl)
+    var ltp: Double {
+        return stockData.ltp
     }
     
     var pnlTextColor: UIColor {

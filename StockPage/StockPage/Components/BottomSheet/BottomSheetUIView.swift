@@ -16,6 +16,17 @@ class BottomSheetUIView: UIView {
     private var expandedRows: [UIView] = []
     private var topView: UIView?
     private var bottomView: UIView?
+    private var profitAndLossLabelTop: UILabel?
+    private var profitAndLossLabelBottom: UILabel?
+    private var currentValueLabel: UILabel?
+    private var totalInvestmentLabel: UILabel?
+    private var todaysProfitAndLossLabel: UILabel?
+    
+    var viewModel: BottomSheetUIViewModel? {
+        didSet {
+            updateData()
+        }
+    }
 
     // MARK: - Initializer
     override init(frame: CGRect) {
@@ -45,9 +56,10 @@ class BottomSheetUIView: UIView {
         stackView.distribution = .fill
 
         // Add collapsed row (Profit & Loss only)
-        let profitAndLossRow1 = createRow(title: "Profit & Loss*", value: "₹ 697.06 (2.44%)", valueColor: .systemRed)
-        topView = profitAndLossRow1
-        stackView.addArrangedSubview(profitAndLossRow1)
+        let profitAndLossRow1 = createRow(title: "Profit & Loss*")
+        topView = profitAndLossRow1.row
+        profitAndLossLabelTop = profitAndLossRow1.valueLabel
+        stackView.addArrangedSubview(profitAndLossRow1.row)
         
         
 
@@ -56,12 +68,15 @@ class BottomSheetUIView: UIView {
         separator.backgroundColor = .lightGray
         separator.translatesAutoresizingMaskIntoConstraints = false
         separator.heightAnchor.constraint(equalToConstant: 1).isActive = true
-
+        
+        let row1 = createRow(title: "Current value*")
+        currentValueLabel = row1.valueLabel
+        let row2 = createRow(title: "Total investment*")
+        totalInvestmentLabel = row2.valueLabel
+        let row3 = createRow(title: "Today's Profit & Loss*")
+        todaysProfitAndLossLabel = row3.valueLabel
         expandedRows = [
-            createRow(title: "Current value*", value: "₹ 27,893.65", valueColor: .systemGreen),
-            createRow(title: "Total investment*", value: "₹ 28,590.71", valueColor: .systemGreen),
-            createRow(title: "Today's Profit & Loss*", value: "₹ 235.65", valueColor: .systemRed),
-            separator
+            row1.row, row2.row, row3.row, separator
         ]
 
         // Add rows to stackView (hidden initially)
@@ -70,10 +85,11 @@ class BottomSheetUIView: UIView {
             stackView.addArrangedSubview(row)
         }
         
-        let profitAndLossRow2 = createRow(title: "Profit & Loss*", value: "₹ 697.06 (2.44%)", valueColor: .systemRed)
-        bottomView = profitAndLossRow2
-        profitAndLossRow2.isHidden = true
-        stackView.addArrangedSubview(profitAndLossRow2)
+        let profitAndLossRow2 = createRow(title: "Profit & Loss*")
+        bottomView = profitAndLossRow2.row
+        profitAndLossRow2.row.isHidden = true
+        profitAndLossLabelBottom = profitAndLossRow2.valueLabel
+        stackView.addArrangedSubview(profitAndLossRow2.row)
 
         // Add stack view to the view
         self.addSubview(stackView)
@@ -103,7 +119,7 @@ class BottomSheetUIView: UIView {
     }
 
     // MARK: - Helper Method
-    private func createRow(title: String, value: String, valueColor: UIColor) -> UIView {
+    private func createRow(title: String) -> (row: UIView, valueLabel: UILabel) {
         // Horizontal stack for a row
         let rowStackView = UIStackView()
         rowStackView.axis = .horizontal
@@ -119,14 +135,28 @@ class BottomSheetUIView: UIView {
 
         // Value label
         let valueLabel = UILabel()
-        valueLabel.text = value
+        valueLabel.text = ""
         valueLabel.font = UIFont.systemFont(ofSize: 12, weight: .light)
-        valueLabel.textColor = valueColor
+        valueLabel.textColor = .darkGray
 
         // Add labels to the row stack view
         rowStackView.addArrangedSubview(titleLabel)
         rowStackView.addArrangedSubview(valueLabel)
 
-        return rowStackView
+        return (row: rowStackView, valueLabel: valueLabel)
+    }
+    
+    private func updateData() {
+        profitAndLossLabelTop?.text = viewModel?.totalPnL.indianCurrencyFormat
+        profitAndLossLabelTop?.textColor = viewModel?.totalPnLTextColor
+        
+        currentValueLabel?.text = viewModel?.currentValue.indianCurrencyFormat
+        totalInvestmentLabel?.text = viewModel?.totalInvestment.indianCurrencyFormat
+        todaysProfitAndLossLabel?.text = viewModel?.todayPnL.indianCurrencyFormat
+        todaysProfitAndLossLabel?.textColor = viewModel?.todayPnLTextColor
+        
+        profitAndLossLabelBottom?.text = viewModel?.totalPnL.indianCurrencyFormat
+        profitAndLossLabelBottom?.textColor = viewModel?.totalPnLTextColor
+        
     }
 }

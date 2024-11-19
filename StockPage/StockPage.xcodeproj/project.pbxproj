@@ -19,6 +19,7 @@
 		B22184732CEA07E3005E33A2 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22184722CEA07E3005E33A2 /* PortfolioViewController.swift */; };
 		B22184752CEA07ED005E33A2 /* FundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22184742CEA07ED005E33A2 /* FundViewController.swift */; };
 		B22184772CEA07FB005E33A2 /* InvestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22184762CEA07FB005E33A2 /* InvestViewController.swift */; };
+		B26B5FBF2CECFC5500A40C1A /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26B5FBE2CECFC5500A40C1A /* Double+Extensions.swift */; };
 		B2F100C62CEA2A44009E7D37 /* TabChildControllerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100C52CEA2A44009E7D37 /* TabChildControllerConfiguration.swift */; };
 		B2F100C92CEA46BB009E7D37 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100C82CEA46BB009E7D37 /* Constants.swift */; };
 		B2F100D22CEA5522009E7D37 /* PortfolioTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100D02CEA5522009E7D37 /* PortfolioTableCell.swift */; };
@@ -27,8 +28,6 @@
 		B2F100D82CEA9634009E7D37 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100D72CEA9634009E7D37 /* HTTPClient.swift */; };
 		B2F100DA2CEA96DA009E7D37 /* PortfolioDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100D92CEA96DA009E7D37 /* PortfolioDataModel.swift */; };
 		B2F100DC2CEAA022009E7D37 /* PortfolioDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100DB2CEAA022009E7D37 /* PortfolioDataViewModel.swift */; };
-		B2F100E22CEAB310009E7D37 /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100E12CEAB310009E7D37 /* StringUtil.swift */; };
-		B2F100E42CEAC8CE009E7D37 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100E32CEAC8CE009E7D37 /* UIImage+Extensions.swift */; };
 		B2F100E62CEAE7F1009E7D37 /* PortfolioCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100E52CEAE7F1009E7D37 /* PortfolioCellViewModel.swift */; };
 		B2F100EA2CEC72C3009E7D37 /* BottomSheetUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100E92CEC72C3009E7D37 /* BottomSheetUIView.swift */; };
 		B2F100EC2CEC9C79009E7D37 /* BottomSheetUIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100EB2CEC9C79009E7D37 /* BottomSheetUIViewModel.swift */; };
@@ -68,6 +67,7 @@
 		B22184722CEA07E3005E33A2 /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
 		B22184742CEA07ED005E33A2 /* FundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundViewController.swift; sourceTree = "<group>"; };
 		B22184762CEA07FB005E33A2 /* InvestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestViewController.swift; sourceTree = "<group>"; };
+		B26B5FBE2CECFC5500A40C1A /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		B2F100C52CEA2A44009E7D37 /* TabChildControllerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabChildControllerConfiguration.swift; sourceTree = "<group>"; };
 		B2F100C82CEA46BB009E7D37 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B2F100D02CEA5522009E7D37 /* PortfolioTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioTableCell.swift; sourceTree = "<group>"; };
@@ -76,8 +76,6 @@
 		B2F100D72CEA9634009E7D37 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		B2F100D92CEA96DA009E7D37 /* PortfolioDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDataModel.swift; sourceTree = "<group>"; };
 		B2F100DB2CEAA022009E7D37 /* PortfolioDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDataViewModel.swift; sourceTree = "<group>"; };
-		B2F100E12CEAB310009E7D37 /* StringUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtil.swift; sourceTree = "<group>"; };
-		B2F100E32CEAC8CE009E7D37 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		B2F100E52CEAE7F1009E7D37 /* PortfolioCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCellViewModel.swift; sourceTree = "<group>"; };
 		B2F100E92CEC72C3009E7D37 /* BottomSheetUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetUIView.swift; sourceTree = "<group>"; };
 		B2F100EB2CEC9C79009E7D37 /* BottomSheetUIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetUIViewModel.swift; sourceTree = "<group>"; };
@@ -187,7 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				B2F100D42CEA7E3D009E7D37 /* UIColor+Extensions.swift */,
-				B2F100E32CEAC8CE009E7D37 /* UIImage+Extensions.swift */,
+				B26B5FBE2CECFC5500A40C1A /* Double+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -257,7 +255,6 @@
 			isa = PBXGroup;
 			children = (
 				B2F100D72CEA9634009E7D37 /* HTTPClient.swift */,
-				B2F100E12CEAB310009E7D37 /* StringUtil.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -412,7 +409,6 @@
 			files = (
 				B22184412CE9F0E3005E33A2 /* RootTabBarController.swift in Sources */,
 				B22184732CEA07E3005E33A2 /* PortfolioViewController.swift in Sources */,
-				B2F100E22CEAB310009E7D37 /* StringUtil.swift in Sources */,
 				B2F100E62CEAE7F1009E7D37 /* PortfolioCellViewModel.swift in Sources */,
 				B2F100EC2CEC9C79009E7D37 /* BottomSheetUIViewModel.swift in Sources */,
 				B2F100D82CEA9634009E7D37 /* HTTPClient.swift in Sources */,
@@ -424,11 +420,11 @@
 				B2F100C92CEA46BB009E7D37 /* Constants.swift in Sources */,
 				B2F100D52CEA7E3D009E7D37 /* UIColor+Extensions.swift in Sources */,
 				B22184772CEA07FB005E33A2 /* InvestViewController.swift in Sources */,
+				B26B5FBF2CECFC5500A40C1A /* Double+Extensions.swift in Sources */,
 				B221846F2CEA07CD005E33A2 /* WatchListViewController.swift in Sources */,
 				B2F100DC2CEAA022009E7D37 /* PortfolioDataViewModel.swift in Sources */,
 				B2F100C62CEA2A44009E7D37 /* TabChildControllerConfiguration.swift in Sources */,
 				B2F100D22CEA5522009E7D37 /* PortfolioTableCell.swift in Sources */,
-				B2F100E42CEAC8CE009E7D37 /* UIImage+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
