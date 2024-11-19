@@ -13,6 +13,8 @@ class PortfolioViewController: UIViewController {
     // MARK: - Properties
     let viewModel = PortfolioDataViewModel()
     private var cancellables = Set<AnyCancellable>()
+    private var isExpanded = false
+
     
     // MARK: Views
     
@@ -32,8 +34,45 @@ class PortfolioViewController: UIViewController {
         let refresh = UIRefreshControl()
         return refresh
     }()
+    
+    lazy var buttonBottomView = {
+        let uv = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 5))
+        
+        return uv
+    }()
+    
+    lazy var switcherView = {
+        let view = UIView()
+        let leftButton = UIButton()
+        leftButton.setTitle("Positions", for: .normal)
+        leftButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        
+        let rightButton = UIButton()
+        rightButton.setTitle("Holdings", for: .normal)
+        rightButton.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(buttonBottomView)
+        view.addSubview(leftButton)
+        view.addSubview(rightButton)
+        
+        NSLayoutConstraint.activate([
+            leftButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 64),
+            leftButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            
+            rightButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -64),
+            rightButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            
+        ])
+        
+        return view
+    }()
+    
+    let sheet = BottomSheetUIView()
+    
+    // MARK: - METHODS
 
-    // MARK: - Lifecycle Methods
+    // MARK:  Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
@@ -45,7 +84,7 @@ class PortfolioViewController: UIViewController {
         
     }
     
-    // MARK: - Private methods
+    // MARK:  Private methods
     
     private func setUpBindings() {
         viewModel.$stockData
@@ -75,9 +114,7 @@ class PortfolioViewController: UIViewController {
         // Set up programmatic view
         style()
         layout()
-        
-        
-        
+
     }
     
     private func style() {
@@ -91,15 +128,35 @@ class PortfolioViewController: UIViewController {
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
         refreshControl.tintColor = .tabTintColor
         
+        switcherView.translatesAutoresizingMaskIntoConstraints = false
+        switcherView.backgroundColor = .red
+        
+        sheet.translatesAutoresizingMaskIntoConstraints = false
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action:
+                #selector(handleTap))
+        gestureRecognizer.cancelsTouchesInView = false
+        sheet.addGestureRecognizer(gestureRecognizer)
+        sheet.layer.cornerRadius = 12
+        
     }
     
     private func layout() {
         self.view.addSubview(tableView)
         self.view.addSubview(loader)
+        self.view.addSubview(switcherView)
         tableView.addSubview(refreshControl)
+        self.view.addSubview(sheet)
+        
         
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            switcherView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            switcherView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            switcherView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            switcherView.heightAnchor.constraint(equalToConstant: 48)
+        ])
+        
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: switcherView.bottomAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
@@ -107,6 +164,12 @@ class PortfolioViewController: UIViewController {
         NSLayoutConstraint.activate([
             loader.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             loader.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            sheet.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            sheet.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            sheet.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant: -80)
         ])
     }
     
@@ -155,6 +218,10 @@ class PortfolioViewController: UIViewController {
     @objc func refresh(_ sender: AnyObject) {
         viewModel.fetchData()
     }
+    
+    @objc private func handleTap() {
+        sheet.toggleExpanded()
+    }
 
 }
 
@@ -173,6 +240,10 @@ extension PortfolioViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     

@@ -27,6 +27,11 @@
 		B2F100D82CEA9634009E7D37 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100D72CEA9634009E7D37 /* HTTPClient.swift */; };
 		B2F100DA2CEA96DA009E7D37 /* PortfolioDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100D92CEA96DA009E7D37 /* PortfolioDataModel.swift */; };
 		B2F100DC2CEAA022009E7D37 /* PortfolioDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100DB2CEAA022009E7D37 /* PortfolioDataViewModel.swift */; };
+		B2F100E22CEAB310009E7D37 /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100E12CEAB310009E7D37 /* StringUtil.swift */; };
+		B2F100E42CEAC8CE009E7D37 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100E32CEAC8CE009E7D37 /* UIImage+Extensions.swift */; };
+		B2F100E62CEAE7F1009E7D37 /* PortfolioCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100E52CEAE7F1009E7D37 /* PortfolioCellViewModel.swift */; };
+		B2F100EA2CEC72C3009E7D37 /* BottomSheetUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100E92CEC72C3009E7D37 /* BottomSheetUIView.swift */; };
+		B2F100EC2CEC9C79009E7D37 /* BottomSheetUIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100EB2CEC9C79009E7D37 /* BottomSheetUIViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +76,11 @@
 		B2F100D72CEA9634009E7D37 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		B2F100D92CEA96DA009E7D37 /* PortfolioDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDataModel.swift; sourceTree = "<group>"; };
 		B2F100DB2CEAA022009E7D37 /* PortfolioDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDataViewModel.swift; sourceTree = "<group>"; };
+		B2F100E12CEAB310009E7D37 /* StringUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtil.swift; sourceTree = "<group>"; };
+		B2F100E32CEAC8CE009E7D37 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		B2F100E52CEAE7F1009E7D37 /* PortfolioCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCellViewModel.swift; sourceTree = "<group>"; };
+		B2F100E92CEC72C3009E7D37 /* BottomSheetUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetUIView.swift; sourceTree = "<group>"; };
+		B2F100EB2CEC9C79009E7D37 /* BottomSheetUIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetUIViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,9 +131,10 @@
 		B221843B2CE9F0E3005E33A2 /* StockPage */ = {
 			isa = PBXGroup;
 			children = (
-				B2F100C82CEA46BB009E7D37 /* Constants.swift */,
 				B2F100D62CEA9166009E7D37 /* Utils */,
 				B29769402CEA21E2001E2D4F /* Extensions */,
+				B2F100E72CEC719C009E7D37 /* Components */,
+				B2F100C82CEA46BB009E7D37 /* Constants.swift */,
 				B221846C2CEA079D005E33A2 /* TabBarControllers */,
 				B221843C2CE9F0E3005E33A2 /* AppDelegate.swift */,
 				B22184452CE9F0E5005E33A2 /* Assets.xcassets */,
@@ -176,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				B2F100D42CEA7E3D009E7D37 /* UIColor+Extensions.swift */,
+				B2F100E32CEAC8CE009E7D37 /* UIImage+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -236,6 +248,7 @@
 			children = (
 				B2F100D02CEA5522009E7D37 /* PortfolioTableCell.swift */,
 				B2F100D12CEA5522009E7D37 /* PortfolioTableCell.xib */,
+				B2F100E52CEAE7F1009E7D37 /* PortfolioCellViewModel.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -244,8 +257,26 @@
 			isa = PBXGroup;
 			children = (
 				B2F100D72CEA9634009E7D37 /* HTTPClient.swift */,
+				B2F100E12CEAB310009E7D37 /* StringUtil.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		B2F100E72CEC719C009E7D37 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B2F100E82CEC71A4009E7D37 /* BottomSheet */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B2F100E82CEC71A4009E7D37 /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				B2F100E92CEC72C3009E7D37 /* BottomSheetUIView.swift */,
+				B2F100EB2CEC9C79009E7D37 /* BottomSheetUIViewModel.swift */,
+			);
+			path = BottomSheet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,9 +412,13 @@
 			files = (
 				B22184412CE9F0E3005E33A2 /* RootTabBarController.swift in Sources */,
 				B22184732CEA07E3005E33A2 /* PortfolioViewController.swift in Sources */,
+				B2F100E22CEAB310009E7D37 /* StringUtil.swift in Sources */,
+				B2F100E62CEAE7F1009E7D37 /* PortfolioCellViewModel.swift in Sources */,
+				B2F100EC2CEC9C79009E7D37 /* BottomSheetUIViewModel.swift in Sources */,
 				B2F100D82CEA9634009E7D37 /* HTTPClient.swift in Sources */,
 				B22184712CEA07D7005E33A2 /* OrderViewController.swift in Sources */,
 				B2F100DA2CEA96DA009E7D37 /* PortfolioDataModel.swift in Sources */,
+				B2F100EA2CEC72C3009E7D37 /* BottomSheetUIView.swift in Sources */,
 				B221843D2CE9F0E3005E33A2 /* AppDelegate.swift in Sources */,
 				B22184752CEA07ED005E33A2 /* FundViewController.swift in Sources */,
 				B2F100C92CEA46BB009E7D37 /* Constants.swift in Sources */,
@@ -393,6 +428,7 @@
 				B2F100DC2CEAA022009E7D37 /* PortfolioDataViewModel.swift in Sources */,
 				B2F100C62CEA2A44009E7D37 /* TabChildControllerConfiguration.swift in Sources */,
 				B2F100D22CEA5522009E7D37 /* PortfolioTableCell.swift in Sources */,
+				B2F100E42CEAC8CE009E7D37 /* UIImage+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

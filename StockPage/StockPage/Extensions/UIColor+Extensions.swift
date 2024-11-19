@@ -14,4 +14,5 @@ extension UIColor {
     static let cellTextPlaceholderColor = UIColor(red: 170/255, green: 170/255, blue: 170/255, alpha: 1)
     static let profitColor = UIColor(red: 68/255, green: 157/255, blue: 122/255, alpha: 1)
     static let lossColor = UIColor(red: 197/255, green: 76/255, blue: 80/255, alpha: 1)
+    static let bottomSheetColor = UIColor(red: 243/255, green: 243/255, blue: 243/255, alpha: 1)
 }
