@@ -15,4 +15,6 @@ extension UIColor {
     static let profitColor = UIColor(red: 68/255, green: 157/255, blue: 122/255, alpha: 1)
     static let lossColor = UIColor(red: 197/255, green: 76/255, blue: 80/255, alpha: 1)
     static let bottomSheetColor = UIColor(red: 243/255, green: 243/255, blue: 243/255, alpha: 1)
+    static let grayLight = UIColor(red: 153/255, green: 153/255, blue: 153/255, alpha: 1)
+    static let grayDark = UIColor(red: 70/255, green: 70/255, blue: 70/255, alpha: 1)
 }

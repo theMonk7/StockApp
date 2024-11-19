@@ -35,27 +35,34 @@ class PortfolioViewController: UIViewController {
         return refresh
     }()
     
-    lazy var buttonBottomView = {
-        let uv = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 5))
-        
-        return uv
-    }()
-    
     lazy var switcherView = {
         let view = UIView()
+
+        // Left button setup
         let leftButton = UIButton()
         leftButton.setTitle("Positions", for: .normal)
+        leftButton.setTitleColor(.grayLight, for: .normal)
+        leftButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
         leftButton.translatesAutoresizingMaskIntoConstraints = false
         
-        
-        
+        // Right button setup
         let rightButton = UIButton()
         rightButton.setTitle("Holdings", for: .normal)
+        rightButton.setTitleColor(.grayDark, for: .normal)
+        rightButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
         rightButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(buttonBottomView)
+        
+        // Divider setup
+        let divider = UIView()
+        divider.backgroundColor = .grayLight
+        divider.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Add subviews
         view.addSubview(leftButton)
         view.addSubview(rightButton)
+        view.addSubview(divider)
         
+        // Set constraints
         NSLayoutConstraint.activate([
             leftButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 64),
             leftButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
@@ -63,10 +70,16 @@ class PortfolioViewController: UIViewController {
             rightButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -64),
             rightButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             
+            // Divider constraints
+            divider.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
+            divider.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8),
+            divider.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            divider.heightAnchor.constraint(equalToConstant: 1) // Set height explicitly
         ])
         
         return view
     }()
+
     
     let sheet = BottomSheetUIView()
     
@@ -134,7 +147,6 @@ class PortfolioViewController: UIViewController {
         refreshControl.tintColor = .tabTintColor
         
         switcherView.translatesAutoresizingMaskIntoConstraints = false
-        switcherView.backgroundColor = .red
         
         sheet.translatesAutoresizingMaskIntoConstraints = false
         let gestureRecognizer = UITapGestureRecognizer(target: self, action:
@@ -199,7 +211,7 @@ class PortfolioViewController: UIViewController {
             image: UIImage(systemName: "arrow.up.arrow.down"),
                 style: .plain,
                 target: self,
-                action: #selector(buttonTapped)
+                action: #selector(sortData)
         )
         
         let dividerView = UIView(frame: CGRect(x: 0, y: 0, width: 1, height: 20))
@@ -218,6 +230,9 @@ class PortfolioViewController: UIViewController {
     
     @objc private func buttonTapped() {
         
+    }
+    @objc private func sortData() {
+        viewModel.sortData()
     }
     
     @objc func refresh(_ sender: AnyObject) {
