@@ -38,21 +38,18 @@ class PortfolioViewController: UIViewController {
     lazy var switcherView = {
         let view = UIView()
 
-        // Left button setup
         let leftButton = UIButton()
         leftButton.setTitle("Positions", for: .normal)
         leftButton.setTitleColor(.grayLight, for: .normal)
         leftButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
         leftButton.translatesAutoresizingMaskIntoConstraints = false
         
-        // Right button setup
         let rightButton = UIButton()
         rightButton.setTitle("Holdings", for: .normal)
         rightButton.setTitleColor(.grayDark, for: .normal)
         rightButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
         rightButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        // Divider setup
+
         let divider = UIView()
         divider.backgroundColor = .grayLight
         divider.translatesAutoresizingMaskIntoConstraints = false
@@ -191,7 +188,7 @@ class PortfolioViewController: UIViewController {
     }
     
     private func setUpNavigationBarItems() {
-        // Left Bar Items
+
         let profileButton = UIBarButtonItem(
             image: UIImage(systemName: "person.circle"),
                 style: .plain,
@@ -206,7 +203,6 @@ class PortfolioViewController: UIViewController {
 
         navigationItem.leftBarButtonItems = [profileButton, titleItem]
         
-        // Right Bar Items
         let arrowButton = UIBarButtonItem(
             image: UIImage(systemName: "arrow.up.arrow.down"),
                 style: .plain,

@@ -21,7 +21,7 @@ class OrderViewController: UIViewController {
         setUpNavigationBarItems()
     }
     private func setUpNavigationBarItems() {
-        // Left Bar Items
+
         let profileButton = UIBarButtonItem(
             image: UIImage(systemName: "person.circle"),
                 style: .plain,

@@ -11,7 +11,7 @@ class BottomSheetUIView: UIView {
 
     // MARK: - Properties
     private let stackView = UIStackView()
-    private var isExpanded = false // To track the expanded/collapsed state
+    private var isExpanded = false
 
     private var expandedRows: [UIView] = []
     private var topView: UIView?
@@ -55,7 +55,6 @@ class BottomSheetUIView: UIView {
         stackView.alignment = .fill
         stackView.distribution = .fill
 
-        // Add collapsed row (Profit & Loss only)
         let profitAndLossRow1 = createRow(title: "Profit & Loss*")
         topView = profitAndLossRow1.row
         profitAndLossLabelTop = profitAndLossRow1.valueLabel
@@ -63,7 +62,6 @@ class BottomSheetUIView: UIView {
         
         
 
-        // Add all expanded rows
         let separator = UIView()
         separator.backgroundColor = .lightGray
         separator.translatesAutoresizingMaskIntoConstraints = false
@@ -79,7 +77,6 @@ class BottomSheetUIView: UIView {
             row1.row, row2.row, row3.row, separator
         ]
 
-        // Add rows to stackView (hidden initially)
         expandedRows.forEach { row in
             row.isHidden = true
             stackView.addArrangedSubview(row)
@@ -91,10 +88,8 @@ class BottomSheetUIView: UIView {
         profitAndLossLabelBottom = profitAndLossRow2.valueLabel
         stackView.addArrangedSubview(profitAndLossRow2.row)
 
-        // Add stack view to the view
         self.addSubview(stackView)
 
-        // Constraints for the stack view
         stackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
@@ -120,26 +115,23 @@ class BottomSheetUIView: UIView {
 
     // MARK: - Helper Method
     private func createRow(title: String) -> (row: UIView, valueLabel: UILabel) {
-        // Horizontal stack for a row
+
         let rowStackView = UIStackView()
         rowStackView.axis = .horizontal
         rowStackView.spacing = 8
         rowStackView.alignment = .center
         rowStackView.distribution = .equalSpacing
 
-        // Title label
         let titleLabel = UILabel()
         titleLabel.text = title
         titleLabel.font = UIFont.systemFont(ofSize: 12, weight: .light)
         titleLabel.textColor = .darkGray
 
-        // Value label
         let valueLabel = UILabel()
         valueLabel.text = ""
         valueLabel.font = UIFont.systemFont(ofSize: 12, weight: .light)
         valueLabel.textColor = .darkGray
 
-        // Add labels to the row stack view
         rowStackView.addArrangedSubview(titleLabel)
         rowStackView.addArrangedSubview(valueLabel)
 

@@ -23,7 +23,6 @@ class RootTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         // Set Up Tab Bar Controller
         setupTabBar()
@@ -37,7 +36,7 @@ class RootTabBarController: UITabBarController {
         let portfolioNavController = makeTabChildControllerWith(.portfolio)
         let fundNavController = makeTabChildControllerWith(.funds)
         let investNavController = makeTabChildControllerWith(.invest)
-        // Set the view controllers of the tab bar
+
         self.viewControllers = [watchNavController, orderNavController, portfolioNavController, fundNavController, investNavController]
 
         tabBar.tintColor = UIColor.tabTintColor

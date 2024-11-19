@@ -129,10 +129,10 @@
 		B221843B2CE9F0E3005E33A2 /* StockPage */ = {
 			isa = PBXGroup;
 			children = (
+				B2F100C82CEA46BB009E7D37 /* Constants.swift */,
 				B2F100D62CEA9166009E7D37 /* Utils */,
 				B29769402CEA21E2001E2D4F /* Extensions */,
 				B2F100E72CEC719C009E7D37 /* Components */,
-				B2F100C82CEA46BB009E7D37 /* Constants.swift */,
 				B221846C2CEA079D005E33A2 /* TabBarControllers */,
 				B221843C2CE9F0E3005E33A2 /* AppDelegate.swift */,
 				B22184452CE9F0E5005E33A2 /* Assets.xcassets */,
