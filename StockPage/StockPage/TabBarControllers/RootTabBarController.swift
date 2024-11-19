@@ -7,18 +7,6 @@
 
 import UIKit
 
-
-extension UIImage {
-    static func createSelectionIndicator(color: UIColor, size: CGSize, lineWidth: CGFloat) -> UIImage {
-        UIGraphicsBeginImageContextWithOptions(size, false, 0)
-        color.setFill()
-        UIRectFill(CGRect(x: 0, y: -lineWidth, width: size.width, height: lineWidth))
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return image ?? UIImage()
-    }
-}
-
 class RootTabBarController: UITabBarController {
 
     override func viewDidLoad() {
@@ -50,7 +38,7 @@ class RootTabBarController: UITabBarController {
         
         tabBar.selectionIndicatorImage = UIImage.createSelectionIndicator(color: .tabTintColor, size: CGSize(width:tabBar.frame.width/CGFloat(tabBar.items!.count), height: tabBar.frame.height), lineWidth: 3.0)
     }
-    // TODO: - Refactor
+
     private func makeTabChildControllerWith(_ config: TabChildControllerConfiguration) -> UINavigationController {
         
         let vc = config.tabViewController()

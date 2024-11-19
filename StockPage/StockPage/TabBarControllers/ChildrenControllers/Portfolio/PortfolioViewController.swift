@@ -39,13 +39,13 @@ class PortfolioViewController: UIViewController {
         let view = UIView()
 
         let leftButton = UIButton()
-        leftButton.setTitle("Positions", for: .normal)
+        leftButton.setTitle(PortfolioConstants.positions, for: .normal)
         leftButton.setTitleColor(.grayLight, for: .normal)
         leftButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
         leftButton.translatesAutoresizingMaskIntoConstraints = false
         
         let rightButton = UIButton()
-        rightButton.setTitle("Holdings", for: .normal)
+        rightButton.setTitle(PortfolioConstants.holdings, for: .normal)
         rightButton.setTitleColor(.grayDark, for: .normal)
         rightButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
         rightButton.translatesAutoresizingMaskIntoConstraints = false
@@ -190,21 +190,21 @@ class PortfolioViewController: UIViewController {
     private func setUpNavigationBarItems() {
 
         let profileButton = UIBarButtonItem(
-            image: UIImage(systemName: "person.circle"),
+            image: UIImage(systemName: PortfolioConstants.profileIconString),
                 style: .plain,
                 target: self,
                 action: #selector(buttonTapped)
         )
         
         let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 24))
-        titleLabel.text = "Portfolio"
+        titleLabel.text = PortfolioConstants.portfolio
         titleLabel.textColor = .white
         let titleItem = UIBarButtonItem(customView: titleLabel)
 
         navigationItem.leftBarButtonItems = [profileButton, titleItem]
         
         let arrowButton = UIBarButtonItem(
-            image: UIImage(systemName: "arrow.up.arrow.down"),
+            image: UIImage(systemName: PortfolioConstants.sortIconString),
                 style: .plain,
                 target: self,
                 action: #selector(sortData)
@@ -215,7 +215,7 @@ class PortfolioViewController: UIViewController {
         let dividerItem = UIBarButtonItem(customView: dividerView)
             
         let searchButton = UIBarButtonItem(
-            image: UIImage(systemName: "magnifyingglass"),
+            image: UIImage(systemName: PortfolioConstants.searchIconString),
             style: .plain,
             target: self,
             action: #selector(buttonTapped)

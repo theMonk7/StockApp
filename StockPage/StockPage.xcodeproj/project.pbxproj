@@ -20,6 +20,9 @@
 		B22184752CEA07ED005E33A2 /* FundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22184742CEA07ED005E33A2 /* FundViewController.swift */; };
 		B22184772CEA07FB005E33A2 /* InvestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22184762CEA07FB005E33A2 /* InvestViewController.swift */; };
 		B26B5FBF2CECFC5500A40C1A /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26B5FBE2CECFC5500A40C1A /* Double+Extensions.swift */; };
+		B26B5FC12CED238000A40C1A /* BottomSheetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26B5FC02CED238000A40C1A /* BottomSheetConstants.swift */; };
+		B26B5FC32CED243100A40C1A /* PortfolioConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26B5FC22CED243100A40C1A /* PortfolioConstants.swift */; };
+		B26B5FC52CED251B00A40C1A /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26B5FC42CED251B00A40C1A /* UIImage+Extensions.swift */; };
 		B2F100C62CEA2A44009E7D37 /* TabChildControllerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100C52CEA2A44009E7D37 /* TabChildControllerConfiguration.swift */; };
 		B2F100C92CEA46BB009E7D37 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100C82CEA46BB009E7D37 /* Constants.swift */; };
 		B2F100D22CEA5522009E7D37 /* PortfolioTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F100D02CEA5522009E7D37 /* PortfolioTableCell.swift */; };
@@ -68,6 +71,9 @@
 		B22184742CEA07ED005E33A2 /* FundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundViewController.swift; sourceTree = "<group>"; };
 		B22184762CEA07FB005E33A2 /* InvestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestViewController.swift; sourceTree = "<group>"; };
 		B26B5FBE2CECFC5500A40C1A /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		B26B5FC02CED238000A40C1A /* BottomSheetConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetConstants.swift; sourceTree = "<group>"; };
+		B26B5FC22CED243100A40C1A /* PortfolioConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioConstants.swift; sourceTree = "<group>"; };
+		B26B5FC42CED251B00A40C1A /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		B2F100C52CEA2A44009E7D37 /* TabChildControllerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabChildControllerConfiguration.swift; sourceTree = "<group>"; };
 		B2F100C82CEA46BB009E7D37 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B2F100D02CEA5522009E7D37 /* PortfolioTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioTableCell.swift; sourceTree = "<group>"; };
@@ -186,6 +192,7 @@
 			children = (
 				B2F100D42CEA7E3D009E7D37 /* UIColor+Extensions.swift */,
 				B26B5FBE2CECFC5500A40C1A /* Double+Extensions.swift */,
+				B26B5FC42CED251B00A40C1A /* UIImage+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -201,6 +208,7 @@
 		B2F100CA2CEA4E33009E7D37 /* Portfolio */ = {
 			isa = PBXGroup;
 			children = (
+				B26B5FC22CED243100A40C1A /* PortfolioConstants.swift */,
 				B22184722CEA07E3005E33A2 /* PortfolioViewController.swift */,
 				B2F100DB2CEAA022009E7D37 /* PortfolioDataViewModel.swift */,
 				B2F100D92CEA96DA009E7D37 /* PortfolioDataModel.swift */,
@@ -272,6 +280,7 @@
 			children = (
 				B2F100E92CEC72C3009E7D37 /* BottomSheetUIView.swift */,
 				B2F100EB2CEC9C79009E7D37 /* BottomSheetUIViewModel.swift */,
+				B26B5FC02CED238000A40C1A /* BottomSheetConstants.swift */,
 			);
 			path = BottomSheet;
 			sourceTree = "<group>";
@@ -410,10 +419,13 @@
 				B22184412CE9F0E3005E33A2 /* RootTabBarController.swift in Sources */,
 				B22184732CEA07E3005E33A2 /* PortfolioViewController.swift in Sources */,
 				B2F100E62CEAE7F1009E7D37 /* PortfolioCellViewModel.swift in Sources */,
+				B26B5FC52CED251B00A40C1A /* UIImage+Extensions.swift in Sources */,
 				B2F100EC2CEC9C79009E7D37 /* BottomSheetUIViewModel.swift in Sources */,
 				B2F100D82CEA9634009E7D37 /* HTTPClient.swift in Sources */,
 				B22184712CEA07D7005E33A2 /* OrderViewController.swift in Sources */,
+				B26B5FC32CED243100A40C1A /* PortfolioConstants.swift in Sources */,
 				B2F100DA2CEA96DA009E7D37 /* PortfolioDataModel.swift in Sources */,
+				B26B5FC12CED238000A40C1A /* BottomSheetConstants.swift in Sources */,
 				B2F100EA2CEC72C3009E7D37 /* BottomSheetUIView.swift in Sources */,
 				B221843D2CE9F0E3005E33A2 /* AppDelegate.swift in Sources */,
 				B22184752CEA07ED005E33A2 /* FundViewController.swift in Sources */,

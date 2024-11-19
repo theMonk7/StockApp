@@ -55,7 +55,7 @@ class BottomSheetUIView: UIView {
         stackView.alignment = .fill
         stackView.distribution = .fill
 
-        let profitAndLossRow1 = createRow(title: "Profit & Loss*")
+        let profitAndLossRow1 = createRow(title: BottomSheetConstants.profitAndLoss)
         topView = profitAndLossRow1.row
         profitAndLossLabelTop = profitAndLossRow1.valueLabel
         stackView.addArrangedSubview(profitAndLossRow1.row)
@@ -67,11 +67,11 @@ class BottomSheetUIView: UIView {
         separator.translatesAutoresizingMaskIntoConstraints = false
         separator.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
-        let row1 = createRow(title: "Current value*")
+        let row1 = createRow(title: BottomSheetConstants.currentValue)
         currentValueLabel = row1.valueLabel
-        let row2 = createRow(title: "Total investment*")
+        let row2 = createRow(title: BottomSheetConstants.totalInvestment)
         totalInvestmentLabel = row2.valueLabel
-        let row3 = createRow(title: "Today's Profit & Loss*")
+        let row3 = createRow(title: BottomSheetConstants.todayPnL)
         todaysProfitAndLossLabel = row3.valueLabel
         expandedRows = [
             row1.row, row2.row, row3.row, separator
@@ -82,7 +82,7 @@ class BottomSheetUIView: UIView {
             stackView.addArrangedSubview(row)
         }
         
-        let profitAndLossRow2 = createRow(title: "Profit & Loss*")
+        let profitAndLossRow2 = createRow(title: BottomSheetConstants.profitAndLoss)
         bottomView = profitAndLossRow2.row
         profitAndLossRow2.row.isHidden = true
         profitAndLossLabelBottom = profitAndLossRow2.valueLabel
