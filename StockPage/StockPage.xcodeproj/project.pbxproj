@@ -12,8 +12,6 @@
 		B22184462CE9F0E5005E33A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B22184452CE9F0E5005E33A2 /* Assets.xcassets */; };
 		B22184492CE9F0E5005E33A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B22184472CE9F0E5005E33A2 /* LaunchScreen.storyboard */; };
 		B22184542CE9F0E5005E33A2 /* StockPageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22184532CE9F0E5005E33A2 /* StockPageTests.swift */; };
-		B221845E2CE9F0E5005E33A2 /* StockPageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B221845D2CE9F0E5005E33A2 /* StockPageUITests.swift */; };
-		B22184602CE9F0E5005E33A2 /* StockPageUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B221845F2CE9F0E5005E33A2 /* StockPageUITestsLaunchTests.swift */; };
 		B221846F2CEA07CD005E33A2 /* WatchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B221846E2CEA07CD005E33A2 /* WatchListViewController.swift */; };
 		B22184712CEA07D7005E33A2 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22184702CEA07D7005E33A2 /* OrderViewController.swift */; };
 		B22184732CEA07E3005E33A2 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22184722CEA07E3005E33A2 /* PortfolioViewController.swift */; };
@@ -63,8 +61,6 @@
 		B221844F2CE9F0E5005E33A2 /* StockPageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StockPageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B22184532CE9F0E5005E33A2 /* StockPageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPageTests.swift; sourceTree = "<group>"; };
 		B22184592CE9F0E5005E33A2 /* StockPageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StockPageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B221845D2CE9F0E5005E33A2 /* StockPageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPageUITests.swift; sourceTree = "<group>"; };
-		B221845F2CE9F0E5005E33A2 /* StockPageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPageUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B221846E2CEA07CD005E33A2 /* WatchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListViewController.swift; sourceTree = "<group>"; };
 		B22184702CEA07D7005E33A2 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		B22184722CEA07E3005E33A2 /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
@@ -117,7 +113,6 @@
 			children = (
 				B221843B2CE9F0E3005E33A2 /* StockPage */,
 				B22184522CE9F0E5005E33A2 /* StockPageTests */,
-				B221845C2CE9F0E5005E33A2 /* StockPageUITests */,
 				B221843A2CE9F0E3005E33A2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -135,15 +130,15 @@
 		B221843B2CE9F0E3005E33A2 /* StockPage */ = {
 			isa = PBXGroup;
 			children = (
+				B221844A2CE9F0E5005E33A2 /* Info.plist */,
+				B22184452CE9F0E5005E33A2 /* Assets.xcassets */,
+				B22184472CE9F0E5005E33A2 /* LaunchScreen.storyboard */,
+				B221843C2CE9F0E3005E33A2 /* AppDelegate.swift */,
 				B2F100C82CEA46BB009E7D37 /* Constants.swift */,
 				B2F100D62CEA9166009E7D37 /* Utils */,
 				B29769402CEA21E2001E2D4F /* Extensions */,
 				B2F100E72CEC719C009E7D37 /* Components */,
 				B221846C2CEA079D005E33A2 /* TabBarControllers */,
-				B221843C2CE9F0E3005E33A2 /* AppDelegate.swift */,
-				B22184452CE9F0E5005E33A2 /* Assets.xcassets */,
-				B22184472CE9F0E5005E33A2 /* LaunchScreen.storyboard */,
-				B221844A2CE9F0E5005E33A2 /* Info.plist */,
 			);
 			path = StockPage;
 			sourceTree = "<group>";
@@ -154,15 +149,6 @@
 				B22184532CE9F0E5005E33A2 /* StockPageTests.swift */,
 			);
 			path = StockPageTests;
-			sourceTree = "<group>";
-		};
-		B221845C2CE9F0E5005E33A2 /* StockPageUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B221845D2CE9F0E5005E33A2 /* StockPageUITests.swift */,
-				B221845F2CE9F0E5005E33A2 /* StockPageUITestsLaunchTests.swift */,
-			);
-			path = StockPageUITests;
 			sourceTree = "<group>";
 		};
 		B221846C2CEA079D005E33A2 /* TabBarControllers */ = {
@@ -452,8 +438,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B22184602CE9F0E5005E33A2 /* StockPageUITestsLaunchTests.swift in Sources */,
-				B221845E2CE9F0E5005E33A2 /* StockPageUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
