@@ -14,5 +14,4 @@ enum PortfolioConstants {
     static let profileIconString = "person.circle"
     static let sortIconString = "arrow.up.arrow.down"
     static let searchIconString = "magnifyingglass"
-    static let  =
 }
